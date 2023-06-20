@@ -1,7 +1,4 @@
 var swiper = new Swiper(".mySwiper", {
-  autoplay: {
-    delay: 1500, // Adjust the delay value (in milliseconds) as needed
-  },
   pagination: {
     el: ".swiper-pagination",
     type: "progressbar",
@@ -10,10 +7,9 @@ var swiper = new Swiper(".mySwiper", {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
-  speed: 800, // Adjust the speed of the transition (in milliseconds) as needed
-  loop: true, // Enable loop mode for seamless autoplay transition
+ 
 });
-swiper.autoplay.stop(); //Paused the swiper
+
 
 //Created object "sections" and mapped keys to the DOM elements.
 const sections = {
@@ -56,7 +52,6 @@ formInfo.addEventListener("submit", (event) => {
 });
 
 buttons.landingpageButton.addEventListener("click", ()=> {
-  swiper.autoplay.start();
   showSection(sections.section1, sections.section0)
   
 });
@@ -248,12 +243,6 @@ copyIcons.forEach(function(icon) {
     var textToCopy = this.parentNode.textContent.trim();
 
     navigator.clipboard.writeText(textToCopy)
-      // .then(function() {
-      //   alert("Text copied!");
-      // })
-      // .catch(function(error) {
-      //   console.error("Unable to copy text: ", error);
-      // });
   });
 })
 
