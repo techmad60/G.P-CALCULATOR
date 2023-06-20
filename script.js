@@ -248,12 +248,12 @@ copyIcons.forEach(function(icon) {
     var textToCopy = this.parentNode.textContent.trim();
 
     navigator.clipboard.writeText(textToCopy)
-      .then(function() {
-        alert("Text copied!");
-      })
-      .catch(function(error) {
-        console.error("Unable to copy text: ", error);
-      });
+      // .then(function() {
+      //   alert("Text copied!");
+      // })
+      // .catch(function(error) {
+      //   console.error("Unable to copy text: ", error);
+      // });
   });
 })
 

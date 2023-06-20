@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;600&display=swap");
+/* RESET STYLES */
 * {
   color: inherit;
   margin: 0;
@@ -23,10 +24,12 @@ img {
   max-width: 100%;
 }
 
+/* MOBILE ONLY */
 .mobile-only {
   display: block;
 }
 
+/* SWIPER STYLES */
 .swiper {
   width: 100%;
   height: 100%;
@@ -78,6 +81,7 @@ img {
   animation: rotateIcon 2s infinite;
 }
 
+/* ANIMATION */
 @keyframes rotateIcon {
   0% {
     transform: rotate(0deg);
@@ -130,7 +134,7 @@ img {
   font-weight: 500;
 }
 .section-two input {
-  width: 300px;
+  width: 100%;
   padding: 0.7em;
   border: 1px solid #4169E1;
   border-radius: 4px;
@@ -156,11 +160,18 @@ img {
   border-radius: 4px;
 }
 
+.section-three .addCoursebtn {
+  margin: 1em 0;
+}
 .section-three {
   flex-direction: column;
   justify-content: center;
   align-items: start;
   margin: 3em 1em;
+}
+.section-three .form {
+display: flex;
+justify-content: space-evenly;
 }
 .section-three .btn {
   background-color: #4169E1;
@@ -215,6 +226,7 @@ img {
   margin: 0.5em 0;
 }
 
+/* MODAL STYLES */
 .modal {
   --bs-modal-bg: #212529;
 }
@@ -240,6 +252,8 @@ img {
     display: none;
   }
 }
+
+/* UTILITY CLASSES */
 .display-none {
   display: none;
 }
@@ -256,4 +270,8 @@ img {
 
 .hover:hover {
   color: blue;
+}
+
+.copy-icon:active {
+  color: #fff;
 }
