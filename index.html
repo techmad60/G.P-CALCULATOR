@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Techmad's Calculator</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="mobile-only">
+    <div class="landing-page" id="section-zero">
+    <i class="fa-solid fa-calculator calculator-icon"></i>
+    <p><b>GPA CALCULATOR</b></p>
+    <button id="landing-page-btn"><b>Let's go</b></button>
+    </div>
+
+    <div class="section-one display-none" id="section-one">
+    <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+    <div class="swiper-slide graduant-image"><img src="Images - Copy/Graduants 4.jpg" alt="" ></div>
+    <div class="swiper-slide graduant-image"><img src="Images - Copy/Graduants 2.jpg" alt="" ></div>
+    <div class="swiper-slide graduant-image"><img src="Images - Copy/Graduants 1.jpg" alt="" ></div>
+    </div>
+    <div class="swiper-pagination"></div>
+    </div>
+
+    <h1 class="style-greeting">Hello, Welcome</h1>
+
+    <p>Techmad's G.P calculator helps you to calculate your G.p, and also tells you the grade you're on currently.</p>
+
+    <button id="section-one-button">Start</button>
+    </div>
+
+    <div class="section-two display-none" id="section-two">
+    <i class="fa-solid fa-chevron-left color"  id="section-two-go-back-button"></i>
+    <form id="formInfo">
+    <label for="Name">Name<br></label>
+    <input type="text" class="name-input" id="myName" placeholder="Techmad"  name="name" required><br>
+
+    <label for="Name"> Department<br></label>
+    <input type="text" id="myDept" name="department" placeholder="Computer Science" required><br>
+    <button type="submit" class="submit-btn" id="section-two-button">Submit</button>
+    </form>
+
+    </div>
+
+    <div class="section-three display-none" id="section-three">
+    <i class="fa-solid fa-chevron-left color"  id="section-three-go-back-button"></i>
+    <h2 id="greeting" class="style-greeting"></h2>
+
+    <p class="gradepoint">G.P: <span id="gpSpan"></span></p>
+
+    <div id="course-forms" >
+    <div id="course-form-template" class="form">
+
+    <form id="courseForm">
+    <select id="unitLoad" name="unitLoad">
+    <option value=" " disabled selected placeholder>Select unit load</option>
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+    <option value="6">6</option>
+    <option value="7">7</option>
+    <option value="8">8</option>
+    <option value="9">9</option>
+    <option value="10">10</option>
+    </select>
+    <select id="grade" name="grade">
+    <option value=" " disabled selected>Select grade</option>
+    <option value="5">A</option>
+    <option value="4">B</option>
+    <option value="3">C</option>
+    <option value="2">D</option>
+    <option value="1">E</option>
+    <option value="0">F</option>
+    </select>
+
+    <i class="fa-solid fa-xmark btn" id="delete-btn"></i>
+    </form>
+    </div>
+    </div>
+
+
+    <button id="addCoursebtn" class="flex-start btn">Add Course</button>
+    <p class="totalscore flex-start">Total Score: <span id="totalScoreSpan"></span></p>
+    <p class="totalunitLoad flex-start">Total Unit Load: <span id="totalUnitLoadSpan"></span></p>
+    <p id="gradeRemark" class="graderemark"></p>
+    <button id="generateBtn" class="generatebtn btn">Generate</button>
+    <p id="show-help" class="color hover">Show help</p>
+
+
+    <p class="developer">Built by <span ><a href="https://twitter.com/Techmad_01?t=jzufZ64l68Mbe-SeUy_G8w&s=09"class ="color hover">Techmad</a> designed by <a href="https://twitter.com/EgunbiyiM?t=NfLcCV5naBgq5vzwJ5J01Q&s=08"class="color">Ola</a></span></p>
+
+    <p class="garri color hover" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Buy me garri 🥣 🙂 </p>
+    </div>
+
+    <div class="section-four display-none" id="section-four">
+    <i id="close-help" class="fa-solid fa-chevron-left color"></i>
+    <h3 class="color">Help</h3>
+    <p>Select the unit or credit load of the course from the drop down menu, and also do likewise for the grade.</p>
+
+    <p> Use the "Add Course" button to add more fields.</p>
+
+    <p>Use the "X" button to delete a field.
+    </p>
+
+    <p>Click on "Generate" button to generate your grade point.</p>
+
+    <p>All the best comrade!</p>
+
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+    <div class="modal-content">
+    <div class="modal-header">
+    <h1 class="modal-title fs-5 text-light" id="staticBackdropLabel">Account Details</h1>
+    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>
+    <div class="modal-body">
+    <span class="color">Account Number:</span> <span class="color-white text-to-copy">1490256593 <i class="fa-regular fa-copy copy-icon"></i></span><br><hr>
+    <span class="color">Bank:</span>  <span class="color-white text-to-copy">Access Bank <i class="fa-regular fa-copy copy-icon"></i></span><br><hr>
+    <span class="color">Account Name:</span> <span class="color-white text-to-copy">Success Chijindu Obasi <i class="fa-regular fa-copy copy-icon"></i></span>
+    </div>
+    <div class="modal-footer">
+    <button type="button" class="seen-btn" data-bs-dismiss="modal">Seen</button>
+    </div>
+    </div>
+    </div>
+    </div>
+  </div>
+   
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/bc2fd59ebf.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
