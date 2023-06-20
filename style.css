@@ -189,8 +189,7 @@ justify-content: space-evenly;
   padding: 0.2em;
   border-radius: 4px;
   border: 1px solid #4169E1;
-  margin-right: 0.4em;
-  margin-bottom: 1em;
+  margin: 1em 0.4 1em 0;
 }
 .section-three select option {
   color: #4169E1;
